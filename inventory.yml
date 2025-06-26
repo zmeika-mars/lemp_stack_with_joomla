@@ -1,7 +1,7 @@
 all:
   hosts:
     joomla:
-      ansible_host: 172.16.9.150
+      ansible_host: 
       ansible_user: user
   children:
     cmsservers:
