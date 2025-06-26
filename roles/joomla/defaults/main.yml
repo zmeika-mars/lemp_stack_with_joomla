@@ -1,0 +1,3 @@
+joomla_version: "5-1-4"
+joomla_site_dir: "/var/www/sites/joomla"
+joomla_nginx_user: "www-data"

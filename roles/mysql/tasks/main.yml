@@ -1,0 +1,6 @@
+---
+- name: Include tasks for execute scenario install mysql
+  ansible.builtin.include_tasks: install_mysql.yml
+
+- name: Include tasks for execute scenario configure mysql
+  ansible.builtin.include_tasks: cofigure_mysql.yml

@@ -1,0 +1,28 @@
+---
+- name: Install package for unarchive in format unzip
+  ansible.builtin.apt:
+    name: unzip
+    state: present
+
+- name: Download Joomla
+  become: true
+  ansible.builtin.get_url:
+    url: "https://downloads.joomla.org/cms/joomla5/{{ joomla_version }}/Joomla_{{ joomla_version }}-Stable-Full_Package.zip"
+    dest: "/tmp/joomla.zip"
+    mode: '0755'
+
+- name: Unzip Joomla
+  become: true
+  ansible.builtin.unarchive:
+    src: "/tmp/joomla.zip"
+    dest: "{{ joomla_site_dir }}"
+    remote_src: true
+
+- name: Set permissions
+  become: true
+  ansible.builtin.file:
+    path: "{{ joomla_site_dir }}"
+    owner: "{{ joomla_nginx_user }}"
+    group: "{{ joomla_nginx_user }}"
+    recurse: true
+  notify: Nginx reload

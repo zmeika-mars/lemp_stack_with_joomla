@@ -1,0 +1,12 @@
+---
+- name: Install MySQL
+  ansible.builtin.apt:
+    name: mysql-server
+    state: present
+    update_cache: true
+
+- name: Ensure mysql is enabled to run on startup
+  ansible.builtin.service:
+    name: mysql
+    state: started
+    enabled: true

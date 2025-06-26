@@ -1,0 +1,3 @@
+initapps_nginx_user: "www-data"
+initapps_joomla_site_dir: "/var/www/sites/joomla"
+initapps_php_version: "8.1"
