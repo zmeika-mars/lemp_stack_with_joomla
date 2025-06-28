@@ -1,0 +1,4 @@
+---
+collections:
+  - name: community.mysql
+    verson: 3.13.0

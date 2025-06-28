@@ -4,10 +4,6 @@
   vars_files:
     - secret.vault
   roles:
-    - nginx
-    - php
-    - mysql
-    - initapps
-    - joomla
+    - lemp_joomla
     
 

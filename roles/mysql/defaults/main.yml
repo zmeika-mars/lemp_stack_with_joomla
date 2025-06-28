@@ -1,3 +1,1 @@
-mysql_root_password: "{{ vault_mysql_root_password }}"
-mysql_admin_password: "{{ vault_mysql_admin_password }}"
 mysql_admin_privileges: "*.*:ALL"
