@@ -9,7 +9,7 @@
   become: true
   community.mysql.mysql_user:
     name: 'root'
-    password: "{{ vault_mysql_root_password }}"
+    password: "{{ mysql_root_password }}"
     host: 'localhost'
     state: present
     login_unix_socket: /var/run/mysqld/mysqld.sock
@@ -20,10 +20,10 @@
   become: true
   community.mysql.mysql_user:
     name: admin
-    password: "{{ vault_mysql_admin_password  }}"
+    password: "{{ mysql_admin_password  }}"
     priv: "{{ mysql_admin_privileges }}"
     state: present
     login_user: root
-    login_password: "{{ vault_mysql_root_password  }}"
+    login_password: "{{ mysql_root_password  }}"
     login_unix_socket: /var/run/mysqld/mysqld.sock
   ignore_errors: True
