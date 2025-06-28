@@ -14,9 +14,8 @@
 
          4.2 Если коллекция не установлена, коллекцию можно установить используя файл requirements.yml в репозитории
 
-             > Команда для установки зависимости ansible-galaxy install -r <путь до файла>/requirements.yml
-             > 
-             > В репозитории файл находится по следующему пути roles/lemp_joomla/meta/requirements.yml
+              Команда для установки зависимости ansible-galaxy install -r <путь до файла>/requirements.yml
+              В репозитории файл находится по следующему пути roles/lemp_joomla/meta/requirements.yml
    
    
 ##### 4. Запустить установку
