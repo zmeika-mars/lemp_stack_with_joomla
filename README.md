@@ -10,13 +10,13 @@
 
 ##### 4. Для успешного выполнения роли небоходимо загруженная коллекция community.mysql
    
-   4.1 Проверить установленная необходимая коллекция можно выполнив комануд *_ansible-galaxy collection list_*
+         4.1 Проверить установленная необходимая коллекция можно выполнив комануд *_ansible-galaxy collection list_*
 
-   4.2 Если коллекция не установлена, коллекцию можно установить используя файл requirements.yml в репозитории
+         4.2 Если коллекция не установлена, коллекцию можно установить используя файл requirements.yml в репозитории
 
-      > Команда для установки зависимости ansible-galaxy install -r <путь до файла>/requirements.yml
-      > 
-      > В репозитории файл находится по следующему пути roles/lemp_joomla/meta/requirements.yml
+             > Команда для установки зависимости ansible-galaxy install -r <путь до файла>/requirements.yml
+             > 
+             > В репозитории файл находится по следующему пути roles/lemp_joomla/meta/requirements.yml
    
    
 ##### 4. Запустить установку
@@ -25,10 +25,12 @@
 
    Пример команды для запуска playbook без зашифрованных данных (используются значения заданные по умолчанию):
 
+
    >  **ansible-playbook -i inventory.yml lemp-cms_playbook.yml**
 
 
    Запуск playbook с зашифрованными данными Ansible-vault:
+
 
    >  **ansible-playbook -i inventory.yml lemp-cms_playbook.yml  -e "@secret.vault" --ask-vault-pass**
    
